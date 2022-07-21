@@ -1,0 +1,14 @@
+.member {
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(38, 5, 10);
+  position: relative;
+}
+
+#field {
+  width: 800px;
+  height:400px;
+  border: 2px solid rgb(134, 3, 23);
+  margin: 20px;
+  overflow:hidden;
+}
