@@ -2,20 +2,20 @@ const port = 3000;
 
 const http = require('http');
 const server = http.createServer();
-const io = require('socket.io')(server, {
-  cors: '*',
-});
+
+
+// make import/connection to library and your port
+// YOUR CODE // const io = require(...)(..., ...)
+//
 
 const { memberMoveHandler, connectToRoomHandler } = require('./handlers');
 
 io.on('connection', (socket) => {
-  const {room, nickname} = socket.handshake.query;
-  console.log('connection with room - ', room, ' nickname - ', nickname);
+  // take room and nickname from sockets
 
-  socket.join(room);
+  // join to room
 
-  connectToRoomHandler(socket, io);
-  memberMoveHandler(socket, io);
+  // use handlers from './handlers'
 })
 
 server.listen(port, () => console.log(`Server is listening on port ${port}.`));
